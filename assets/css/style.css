@@ -1,0 +1,388 @@
+/* ===== Warna: kuning butter + biru langit ===== */
+:root {
+    --butter: #FFF1B8;
+    --butter-light: #FFF8DC;
+    --cream: #FFFDF5;
+    --sky: #8FCDF2;
+    --sky-dark: #3B8FC7;
+    --sky-tint: #EAF5FC;
+    --ink: #1F3347;
+    --muted: #5F6F80;
+    --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+    --font-body: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--ink);
+    background-color: var(--cream);
+    line-height: 1.7;
+}
+
+h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    line-height: 1.15;
+}
+
+section {
+    padding: 5.5rem 0;
+}
+
+.bg-butter-light { background-color: var(--butter-light); }
+.bg-butter { background-color: var(--butter); }
+.bg-sky-tint { background-color: var(--sky-tint); }
+.bg-cream { background-color: var(--cream); }
+
+.eyebrow {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--sky-dark);
+    margin-bottom: 0.75rem;
+}
+
+.section-title {
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    margin-bottom: 1.25rem;
+}
+
+.text-soft { color: var(--muted); }
+
+/* ===== Navbar ===== */
+.site-nav {
+    background-color: rgba(255, 253, 245, 0.85);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(31, 51, 71, 0.06);
+}
+
+.brand {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.7rem;
+    color: var(--ink);
+    text-decoration: none;
+}
+
+.brand span { color: var(--sky-dark); }
+
+.site-nav .nav-link {
+    color: var(--ink);
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+}
+
+.site-nav .nav-link:hover { color: var(--sky-dark); }
+
+.site-nav .nav-link.active {
+    color: var(--sky-dark);
+    font-weight: 700;
+}
+
+.offcanvas { background-color: var(--cream); }
+
+/* ===== Tombol ===== */
+.btn-ink {
+    background-color: var(--ink);
+    color: #fff;
+    border: 1px solid var(--ink);
+    font-weight: 500;
+}
+
+.btn-ink:hover {
+    background-color: var(--sky-dark);
+    border-color: var(--sky-dark);
+    color: #fff;
+}
+
+.btn-line {
+    background-color: transparent;
+    color: var(--ink);
+    border: 1px solid rgba(31, 51, 71, 0.3);
+    font-weight: 500;
+}
+
+.btn-line:hover {
+    background-color: #fff;
+    border-color: var(--ink);
+    color: var(--ink);
+}
+
+/* ===== Hero ===== */
+#main {
+    overflow-x: hidden;
+    padding: 8.5rem 0 5rem;
+    background: linear-gradient(180deg, var(--butter-light) 0%, var(--cream) 100%);
+}
+
+.hero-hello {
+    font-size: 1.25rem;
+    color: var(--muted);
+    margin-bottom: 0.25rem;
+}
+
+.hero-name {
+    font-size: clamp(3rem, 8vw, 5.6rem);
+    line-height: 1.02;
+}
+
+.hero-name em {
+    color: var(--sky-dark);
+    font-weight: 600;
+}
+
+.hero-desc {
+    font-size: 1.15rem;
+    color: var(--muted);
+    max-width: 34rem;
+}
+
+.hero-meta {
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+.hero-photo-wrap {
+    position: relative;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.hero-photo-wrap::before {
+    content: "";
+    position: absolute;
+    inset: 8% -8% -6% 8%;
+    background-color: var(--sky);
+    border-radius: 50%;
+    opacity: 0.55;
+    z-index: 0;
+}
+
+.hero-photo {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 200px 200px 28px 28px;
+    box-shadow: 0 20px 45px rgba(31, 51, 71, 0.15);
+}
+
+.hero-caption {
+    position: absolute;
+    z-index: 2;
+    left: -1.5rem;
+    bottom: 1.5rem;
+    background-color: #fff;
+    border-radius: 1rem;
+    padding: 0.9rem 1.2rem;
+    box-shadow: 0 10px 30px rgba(31, 51, 71, 0.12);
+    line-height: 1.4;
+}
+
+.hero-caption strong {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+}
+
+.hero-caption small { color: var(--muted); }
+
+/* ===== Kartu ===== */
+.soft-card {
+    background-color: #fff;
+    border-radius: 1.25rem;
+    padding: 1.75rem;
+    box-shadow: 0 8px 28px rgba(31, 51, 71, 0.07);
+    height: 100%;
+}
+
+.icon-circle {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: var(--butter);
+    color: var(--ink);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.tag {
+    display: inline-block;
+    background-color: var(--butter);
+    color: var(--ink);
+    border-radius: 50rem;
+    padding: 0.3rem 0.95rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin: 0 0.35rem 0.5rem 0;
+}
+
+.tag-sky { background-color: var(--sky-tint); }
+
+/* ===== Tentang ===== */
+.fact {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.1rem;
+}
+
+.fact small {
+    display: block;
+    color: var(--muted);
+    line-height: 1.3;
+}
+
+/* ===== Timeline pendidikan ===== */
+.timeline {
+    border-left: 2px solid var(--sky);
+    padding-left: 1.75rem;
+    margin-left: 0.4rem;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 1.75rem;
+}
+
+.timeline-item:last-child { margin-bottom: 0; }
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -2.4rem;
+    top: 0.55rem;
+    width: 0.9rem;
+    height: 0.9rem;
+    border-radius: 50%;
+    background-color: var(--sky-dark);
+    border: 3px solid var(--sky-tint);
+}
+
+.timeline-year {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--sky-dark);
+}
+
+/* ===== Daftar pengalaman ===== */
+.plain-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.plain-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.9rem;
+}
+
+.plain-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.7rem;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: var(--sky);
+}
+
+.award {
+    display: flex;
+    gap: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.award:last-child { margin-bottom: 0; }
+
+/* ===== Project ===== */
+.project-box {
+    background-color: #fff;
+    border-radius: 2rem;
+    padding: 2.5rem;
+    box-shadow: 0 14px 40px rgba(31, 51, 71, 0.08);
+}
+
+.project-img {
+    border-radius: 1.25rem;
+    box-shadow: 0 8px 24px rgba(31, 51, 71, 0.1);
+}
+
+.feature-item {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 0.6rem;
+}
+
+.feature-item i { color: var(--sky-dark); }
+
+/* ===== Keahlian ===== */
+.skill-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: #fff;
+    border-radius: 1rem;
+    padding: 1rem 1.25rem;
+    box-shadow: 0 6px 20px rgba(31, 51, 71, 0.06);
+    height: 100%;
+}
+
+/* ===== Kontak ===== */
+.contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background-color: #fff;
+    color: var(--ink);
+    text-decoration: none;
+    border-radius: 50rem;
+    padding: 0.7rem 1.4rem;
+    margin: 0 0.5rem 0.9rem 0;
+    box-shadow: 0 6px 18px rgba(31, 51, 71, 0.08);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.contact-link:hover {
+    background-color: var(--butter);
+    color: var(--ink);
+    transform: translateY(-2px);
+}
+
+/* ===== Footer ===== */
+#footer {
+    background-color: var(--ink);
+    color: rgba(255, 255, 255, 0.75);
+    padding: 1.75rem 0;
+    font-size: 0.9rem;
+}
+
+#footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#footer a:hover { color: var(--butter); }
+
+@media (max-width: 991.98px) {
+    section { padding: 4rem 0; }
+    #main { padding-top: 7rem; }
+    .hero-caption { left: 0.5rem; }
+    .project-box { padding: 1.5rem; }
+}
+
+.plain-list li:last-child { margin-bottom: 0; }
